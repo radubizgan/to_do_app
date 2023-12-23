@@ -1,38 +1,180 @@
+/* General styles applicable to all devices */
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url("https://images.unsplash.com/photo-1432847712612-926caafaa802?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Header styles */
 .App-header {
-  background-color: #282c34;
+  margin-top: 15vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  gap: 5vh;
 }
 
-.App-link {
-  color: #61dafb;
+.card{
+  background-color: white;
+  color: black;
+  max-width: 90vw;
+  border-radius: 10px;
+  width: 90vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Form styles */
+.Form-wrap {
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#data{
+  margin-left: 4%;
+}
+
+.error-row{
+  margin-left: 7%;
+  margin-top: -15px;
+}
+
+/* List styles */
+.List-wrap {
+  background-color: white;
+  width: 90vh;
+  height: auto;
+  border-radius: 10px;
+  color: black;
+  
+}
+
+.display-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* List Item styles */
+.list-item {
+  width: 100%;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5 5 5 5px
+}
+
+ul {
+  list-style: none;
+}
+
+#btn {
+  margin-right: 15px
+}
+
+/* Input and Label styles */
+input {
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  width: 40%;
+  border-radius: 16px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  align-items: center;
+  background-color: rgba(240, 240, 240, 0.26);
+  border: 1px solid #DFDFDF;
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 10px;
+  max-width: 20%;
+  padding: 10px 22px;
+  text-decoration: none;
+  transition: all .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.error-style {
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  width: 40%;
+  border-radius: 16px;
+  background: #FE9494;
+  color: inherit
+}
+
+button {
+  outline: 0;
+}
+
+button:hover {
+  background-color: #9501BA;
+  color: white
+}
+
+button {
+  background-color: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.19);
+}
+
+/* Media queries for responsiveness */
+
+/* Small devices (phones) */
+@media only screen and (max-width: 600px) {
+  .Form-wrap,
+  .List-wrap {
+    width: 90vw; /* Set width to 90% of viewport width */
   }
-  to {
-    transform: rotate(360deg);
+
+  input {
+    width: 40%; /* Adjust as needed */
   }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Add specific styles for tablets if needed */
+}
+
+/* Large devices (wide screens) */
+@media only screen and (min-width: 1025px) {
+  /* Add specific styles for wide screens if needed */
 }
